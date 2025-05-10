@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <main>
+        <form action="nuevo-gasto.html" method="GET">
+            <label for="description">Nombre presupuesto:</label>
+            <input type="text" id="description" name="description" required">
+            
+            <button type="submit">Crear presupuesto</button>
+        </form>
+
+        <a href="../index.html">
+            <button>Volver al inicio</button>
+        </a>
+    </main>
+</body>
+</html>
