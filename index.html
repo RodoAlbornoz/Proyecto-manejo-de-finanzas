@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Trackeo de gastos</title>
+    <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
     <header>
-        <a href="login">Iniciar sesión</a>
+        <a href="#">Nombre de Usuario</a>
     </header>
 
     <main>
-        <h1>¡Hola, Rodolfo!</h1>
+        <h1>Trackeo de gastos</h1>
+
+        <h2>¡Hola, Rodolfo!</h2>
 
         <h2>¿Qué deseas hacer?</h2>
-        <a href="templates/nuevo-presupuesto.html">
-            <button>Añadir presupuesto</button>
-        </a>
 
-        <a href="templates/consultar-presupuestos.html">
-            <button>Consultar presupuestos</button>
-        </a>
+        <div class="contenedor-botones">
+            <a href="templates/nuevo-presupuesto.html">
+                <button>Añadir presupuesto</button>
+            </a>
+
+            <a href="templates/consultar-presupuestos.html">
+                <button>Consultar presupuestos</button>
+            </a>
+        </div>
     </main>
 </body>
 </html>
