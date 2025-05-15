@@ -38,6 +38,7 @@ a {
 }
 
 button {
+    width: 400px;
     background-color: #00b4d8;
     color: white;
     border: none;
