@@ -7,7 +7,9 @@
 </head>
 <body>
     <header>
-        <a href="#">Nombre de usuario</a>
+        <div class="navbar">
+            <a href="#">Nombre de Usuario</a>
+        </div>
     </header>
 
     <main>
@@ -16,15 +18,13 @@
         <form action="nuevo-gasto.html" method="GET">
             <label for="nombre-presupuesto">Nombre presupuesto:</label>
             <input type="text" id="nombre-presupuesto" name="nombre-presupuesto" required">
+
+            <button type="submit">Crear presupuesto</button>
         </form>
 
-        <div class="contenedor-botones">
-            <button type="submit">Crear presupuesto</button>
-
-            <a href="../index.html">
-                <button>Volver al inicio</button>
-            </a>
-        </div>
+        <a href="../index.html">
+            <button>Volver al inicio</button>
+        </a>
     </main>
 </body>
 </html>

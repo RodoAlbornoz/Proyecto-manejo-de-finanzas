@@ -3,14 +3,14 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-header {
+.navbar {
     display: flex;
     justify-content: flex-end;
     padding: 1rem 2rem;
     background-color: #0077b6;
 }
 
-header a {
+.navbar a {
     color: white;
     font-weight: bold;
 }
