@@ -1,8 +1,25 @@
+/******************* COMPONENTES PRINCIPALES *******************/
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
 
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+main {
+    text-align: center;
+    padding: 10rem;
+    background-color: #f0f4f8;
+}
+
+/******************* NAV BAR *******************/
 .nav-container {
     display: flex;
     justify-content: flex-end;
@@ -23,22 +40,8 @@ body {
     font: 1.2em sans-serif;
     display: flex;
 }
-  
-h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-}
 
-h2 {
-    font-weight: 500;
-}
-
-main {
-    text-align: center;
-    padding: 10rem;
-    background-color: #f0f4f8;
-}
-
+/******************* BOTONES Y LINKS *******************/ 
 button,
 a {
     text-decoration: none;
@@ -62,6 +65,7 @@ button:hover {
     transform: scale(1.05);
 }
 
+/******************* FORMS *******************/
 form {
     display: flex;
     flex-direction: column;
