@@ -1,18 +1,7 @@
+/******************* COMPONENTES PRINCIPALES *******************/
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-}
-
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem 2rem;
-    background-color: #0077b6;
-}
-
-.navbar a {
-    color: white;
-    font-weight: bold;
 }
 
 h1 {
@@ -30,6 +19,29 @@ main {
     background-color: #f0f4f8;
 }
 
+/******************* NAV BAR *******************/
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+    background-color: #0077b6;
+}
+
+.nav-container a {
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 0.5em 1em;
+}
+
+.nav-container ul {
+    margin: 0;
+    list-style: none;
+    font: 1.2em sans-serif;
+    display: flex;
+}
+
+/******************* BOTONES Y LINKS *******************/ 
 button,
 a {
     text-decoration: none;
@@ -53,6 +65,7 @@ button:hover {
     transform: scale(1.05);
 }
 
+/******************* FORMS *******************/
 form {
     display: flex;
     flex-direction: column;
