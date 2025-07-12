@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trackeo de gastos</title>
     <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="../static/js/validarPresupuesto.js"></script>
 </head>
 <body>
     <nav class="nav-container">
@@ -15,6 +16,14 @@
 
     <main>
         <h1>Trackeo de gastos</h1>
+
+        <form action="/presupuestos" method="GET">
+            <label for="presupuesto">Ingrese el presupuesto a buscar:</label>
+            <input type="text" id="presupuesto" name="presupuesto">
+            <span class="error-presupuesto"></span>
+
+            <button type="submit">Buscar presupuesto</button>
+        </form>
 
         <h2>Lista de presupuestos:</h2>
 

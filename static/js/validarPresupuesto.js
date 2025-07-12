@@ -2,8 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
-    const nombrePresupuesto = document.getElementById("nombre-presupuesto");
-    const errorNombrePresupuesto = document.querySelector("span.error");
+    const nombrePresupuesto = document.getElementById("presupuesto");
+    const errorNombrePresupuesto = document.querySelector("span.error-presupuesto");
 
     form.addEventListener("submit", (e) => {
         if (!nombrePresupuesto.value) {
