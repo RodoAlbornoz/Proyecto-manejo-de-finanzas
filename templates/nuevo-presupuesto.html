@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="../static/js/validarPresupuesto.js"></script>
 </head>
 <body>
     <nav class="nav-container">
@@ -16,8 +17,9 @@
         <h1>Trackeo de gastos</h1>
 
         <form action="nuevo-gasto.html" method="GET">
-            <label for="nombre-presupuesto">Nombre presupuesto:</label>
-            <input type="text" id="nombre-presupuesto" name="nombre-presupuesto" required">
+            <label for="presupuesto">Nombre presupuesto:</label>
+            <input type="text" id="presupuesto" name="presupuesto">
+            <span class="error-presupuesto"></span>
 
             <button type="submit">Crear presupuesto</button>
         </form>
