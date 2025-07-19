@@ -40,6 +40,12 @@ main {
     display: flex;
 }
 
+.login {
+    padding: 1rem;
+    display: inline-block;
+    border: ridge 2px;
+}
+
 /******************* BOTONES Y LINKS *******************/ 
 button,
 a {
