@@ -1,48 +1,52 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
 
-    const fecha = document.getElementById("fecha");
-    const errorFecha = document.querySelector("span.error-fecha");
+    const mostrarError = (campo, textoError) => {
+        campo.classList.add("error");
+        const elementoError = document.createElement("small");
+        elementoError.classList.add("error-text");
+        elementoError.innerText = textoError;
+        campo.closest(".form-group").appendChild(elementoError);
+    }
 
-    const categoria = document.getElementById("categoria");
-    const errorCategoria = document.querySelector("span.error-categoria");
+    const manejarDataFormulario = (e) => {
+        e.preventDefault();
 
-    const monto = document.getElementById("monto");
-    const errorMonto = document.querySelector("span.error-monto");
+        const fecha = document.getElementById("fecha");
+        const categoria = document.getElementById("categoria");
+        const monto = document.getElementById("monto");
+        const concepto = document.getElementById("concepto");
 
-    const concepto = document.getElementById("concepto");
-    const errorConcepto = document.querySelector("span.error-concepto");
+        document.querySelectorAll(".form-group .error").forEach(field => field.classList.remove("error"));
+        document.querySelectorAll(".error-text").forEach(errorText => errorText.remove());
 
-    form.addEventListener("submit", (e) => {
         if (!fecha.value) {
-            errorFecha.innerHTML = "La fecha es obligatoria";
-            e.preventDefault();
+            mostrarError(fecha, "La fecha es obligatoria");
         } 
-        
+
         if (!categoria.value) {
-            errorCategoria.innerHTML = "La categoria es obligatoria";
-            e.preventDefault();
+            mostrarError(categoria, "La categoria es obligatoria");
         } else if (categoria.value.length <= 3) {
-            errorCategoria.innerHTML = "El nombre de la categoria es muy corta";
-            e.preventDefault();
-        }
-        
+            mostrarError(categoria, "El nombre de la categoria es muy corta");
+        } 
+
         if (!monto.value) {
-            errorMonto.innerHTML = "El monto es obligatorio";
-            e.preventDefault();
+            mostrarError(monto, "El monto es obligatorio");
         } else if (monto.value < 0) {
-            errorMonto.innerHTML = "El monto no puede ser negativo";
-            e.preventDefault();
-        }
-        
+            mostrarError(monto, "El monto no puede ser negativo");
+        } 
+
         if (!concepto.value) {
-            errorConcepto.innerHTML = "El concepto es obligatorio";
-            e.preventDefault();
+            mostrarError(concepto, "El concepto es obligatorio");
         } else if (concepto.value.length <= 3) {
-            errorConcepto.innerHTML = "El nombre del concepto es muy corto";
-            e.preventDefault();
-        }
-    });
+            mostrarError(concepto, "El nombre del concepto es muy corto");
+        } 
+
+        const errorInputs = document.querySelectorAll(".form-group .error");
+        if (errorInputs.length > 0) return;
+
+        form.submit();
+    }
+
+    form.addEventListener("submit", manejarDataFormulario);
 })
