@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const elementoError = document.createElement("small");
         elementoError.classList.add("error-text");
         elementoError.innerText = textoError;
-        campo.closest(".form-group").appendChild(elementoError);
+        campo.closest(".formulario").appendChild(elementoError);
     }
 
     const manejarDataFormulario = (e) => {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const nombrePresupuesto = document.getElementById("presupuesto"); 
 
-        document.querySelectorAll(".form-group .error").forEach(field => field.classList.remove("error"));
+        document.querySelectorAll(".formulario .error").forEach(field => field.classList.remove("error"));
         document.querySelectorAll(".error-text").forEach(errorText => errorText.remove());
 
         if (!nombrePresupuesto.value) {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             mostrarError(nombrePresupuesto, "El nombre del presupuesto es muy corto");
         }
 
-        const errorInputs = document.querySelectorAll(".form-group .error");
+        const errorInputs = document.querySelectorAll(".formulario .error");
         if (errorInputs.length > 0) return;
 
         form.submit();

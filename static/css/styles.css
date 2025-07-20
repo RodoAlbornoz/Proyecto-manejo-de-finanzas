@@ -1,8 +1,13 @@
+:root {
+    --celeste: #00b4d8;
+    --error: #f91919;
+}
+
 /******************* COMPONENTES PRINCIPALES *******************/
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #00b4d8;
+    font-family: 'Inter';
+    background-color: var(--celeste);
 }
 
 h1 {
@@ -16,10 +21,9 @@ h2 {
 
 main {
     display: flex;
-    padding: 10rem;
+    padding: 0.5rem;
     justify-content: center;
-    align-items: center;
-    background-color: #00b4d8;
+    background-color: var(--celeste);
 }
 
 /******************* NAV BAR *******************/
@@ -31,42 +35,41 @@ main {
 
 .nav-container a {
     color: white;
-    font-weight: bold;
-    display: block;
 }
 
 .nav-container ul {
     margin: 0;
     list-style: none;
-    font: 1.2em sans-serif;
-    display: flex;
+    font-size: 1.2em;
 }
 
 .contenido {
-    background-color: #f0f4f8;
-    padding: 5rem;
+    background-color: white;
+    padding: 2rem;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 /******************* BOTONES Y LINKS *******************/ 
-button,
 a {
+    font-weight: bold;
+    color: var(--celeste);
     text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
 }
 
 button {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
     width: 400px;
-    background-color: #00b4d8;
+    background-color: var(--celeste);
     color: white;
     border: none;
-    padding: 0.7rem 4rem;
+    padding: 0.7rem;
     font-weight: bold;
     font-size: 1.3rem;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 button:hover {
@@ -81,14 +84,12 @@ form {
     gap: 1rem;
     max-width: 400px;
     margin: auto;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 form label {
-    align-self: flex-start;
     font-weight: bold;
     color: #023e8a;
-    margin-bottom: 0.2rem;
 }
 
 form input {
@@ -100,7 +101,7 @@ form input {
 }
 
 form input:focus {
-    border-color: #00b4d8;
+    border-color: var(--celeste);
     outline: none;
 }
 
@@ -108,17 +109,13 @@ form input:focus {
 form small {
     font-size: 14px;
     margin-top: 5px;
-    display: block;
-    color: #f91919;
+    color: var(--error);
 }
 
-form input.error,
-form select.error {
-  border-color: #f91919;
-  background: #f9f0f1;
+form input.error {
+  border-color: var(--error);
 }
 
-form .form-group {
+form .formulario {
     margin-bottom: 15px;
-    position: relative;
-  }
+}

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const elementoError = document.createElement("small");
         elementoError.classList.add("error-text");
         elementoError.innerText = textoError;
-        campo.closest(".form-group").appendChild(elementoError);
+        campo.closest(".formulario").appendChild(elementoError);
     }
 
     const manejarDataFormulario = (e) => {
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const monto = document.getElementById("monto");
         const concepto = document.getElementById("concepto");
 
-        document.querySelectorAll(".form-group .error").forEach(field => field.classList.remove("error"));
-        document.querySelectorAll(".error-text").forEach(errorText => errorText.remove());
+        document.querySelectorAll(".formulario .error").forEach(campo => campo.classList.remove("error"));
+        document.querySelectorAll(".error-text").forEach(textoError => textoError.remove());
 
         if (!fecha.value) {
             mostrarError(fecha, "La fecha es obligatoria");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             mostrarError(concepto, "El nombre del concepto es muy corto");
         } 
 
-        const errorInputs = document.querySelectorAll(".form-group .error");
+        const errorInputs = document.querySelectorAll(".formulario .error");
         if (errorInputs.length > 0) return;
 
         form.submit();
