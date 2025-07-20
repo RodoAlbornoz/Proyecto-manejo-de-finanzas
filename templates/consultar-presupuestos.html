@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trackeo de gastos</title>
     <link rel="stylesheet" href="../static/css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <script src="../static/js/validarPresupuesto.js"></script>
 </head>
 <body>
@@ -15,21 +16,24 @@
     </nav>
 
     <main>
-        <h1>Trackeo de gastos</h1>
+        <div class="contenido">
+            <h1>Trackeo de gastos</h1>
 
-        <form action="/presupuestos" method="GET">
-            <label for="presupuesto">Ingrese el presupuesto a buscar:</label>
-            <input type="text" id="presupuesto" name="presupuesto">
-            <span class="error-presupuesto"></span>
+            <form action="/presupuestos" method="GET">
+                <div class="formulario monto">
+                    <label for="presupuesto">Ingrese el presupuesto a buscar:</label>
+                    <input type="text" id="presupuesto" name="presupuesto">
+                </div>
 
-            <button type="submit">Buscar presupuesto</button>
-        </form>
+                <button type="submit">Buscar presupuesto</button>
+            </form>
 
-        <h2>Lista de presupuestos:</h2>
+            <h2>Lista de presupuestos:</h2>
 
-        <a href="../index.html">
-            <button>Volver al inicio</button>
-        </a>
+            <a href="../index.html">
+                <button>Volver al inicio</button>
+            </a>
+        </div>
     </main>
 </body>
 </html>
