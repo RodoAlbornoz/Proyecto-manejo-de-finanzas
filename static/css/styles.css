@@ -1,13 +1,13 @@
 :root {
-    --celeste: #00b4d8;
+    --sky_blue: #00b4d8;
     --error: #f91919;
 }
 
-/******************* COMPONENTES PRINCIPALES *******************/
+/******************* MAIN COMPONENTS *******************/
 body {
     margin: 0;
     font-family: 'Inter';
-    background-color: var(--celeste);
+    background-color: var(--sky_blue);
 }
 
 h1 {
@@ -23,7 +23,7 @@ main {
     display: flex;
     padding: 0.5rem;
     justify-content: center;
-    background-color: var(--celeste);
+    background-color: var(--sky_blue);
 }
 
 /******************* NAV BAR *******************/
@@ -43,7 +43,7 @@ main {
     font-size: 1.2em;
 }
 
-.contenido {
+.content {
     background-color: white;
     padding: 2rem;
     text-align: center;
@@ -51,10 +51,10 @@ main {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-/******************* BOTONES Y LINKS *******************/ 
+/******************* BUTTONS AND LINKS *******************/ 
 a {
     font-weight: bold;
-    color: var(--celeste);
+    color: var(--sky_blue);
     text-decoration: none;
 }
 
@@ -63,7 +63,7 @@ button {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     width: 400px;
-    background-color: var(--celeste);
+    background-color: var(--sky_blue);
     color: white;
     border: none;
     padding: 0.7rem;
@@ -101,11 +101,11 @@ form input {
 }
 
 form input:focus {
-    border-color: var(--celeste);
+    border-color: var(--sky_blue);
     outline: none;
 }
 
-/******************* ERRORES *******************/
+/******************* ERRORS *******************/
 form small {
     font-size: 14px;
     margin-top: 5px;
@@ -116,6 +116,6 @@ form input.error {
   border-color: var(--error);
 }
 
-form .formulario {
+form .form {
     margin-bottom: 15px;
 }
