@@ -26,17 +26,16 @@ if __name__ == '__main__':
 
 @app.route('/add', methods=['POST'])
 def add_expense():
-    if request.method == 'POST':
-        date = request.form['date']
-        category = request.form['category']
-        amount = request.form['amount']
-        description = request.form['description']
+    date = request.form['date']
+    category = request.form['category']
+    amount = request.form['amount']
+    description = request.form['description']
 
-        with sqlite3.connect('db/expenses.db') as conn:
-            cursor = conn.cursor()
-            cursor.execute("INSERT INTO expenses (date, category, amount, description) VALUES (?, ?, ?, ?)", 
-                           (date, category, amount, description))
-            conn.commit()
+    with sqlite3.connect('db/expenses.db') as conn:
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO expenses (date, category, amount, description) VALUES (?, ?, ?, ?)", 
+                        (date, category, amount, description))
+        conn.commit()
         
         return redirect(url_for('index'))
 
