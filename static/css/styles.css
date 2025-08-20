@@ -124,19 +124,17 @@ form .form {
 @media screen and (max-width: 885px) {
     .content {
         width: 75%;
+        max-width: 400px;
     }
 
     button {
         width: 90%;
         margin-bottom: 5px;
     }
-    
+
     form {
         align-items: center;
-    }
-
-    form button {
-        width: 100%;
+        padding: 0rem;
     }
 
     .form {
