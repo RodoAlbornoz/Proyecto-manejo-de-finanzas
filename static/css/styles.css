@@ -21,8 +21,10 @@ h2 {
 
 main {
     display: flex;
-    padding: 0.5rem;
     justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0.5rem;
     background-color: var(--sky_blue);
 }
 
@@ -107,8 +109,7 @@ form input:focus {
 
 /******************* ERRORS *******************/
 form small {
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 100%;
     color: var(--error);
 }
 
@@ -118,4 +119,27 @@ form input.error {
 
 form .form {
     margin-bottom: 15px;
+}
+
+@media screen and (max-width: 885px) {
+    .content {
+        width: 75%;
+    }
+
+    button {
+        width: 90%;
+        margin-bottom: 5px;
+    }
+    
+    form {
+        align-items: center;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
 }
